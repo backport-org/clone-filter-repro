@@ -14,11 +14,11 @@ git fetch origin pull/614/head
 npm ci && npm run codegen
 
 # Without the fix: "✖ Cherry-picking: Update greeting (#1)"
-git checkout 4df3cf38b1cc73e1b01a09a331ca928a437e167c
+git checkout 9b3c9d1d046c9852232958efb12366b4228d087c
 npm start -- --repo backport-org/clone-filter-repro --pr 1 --branch 7.x --clone-filter blob:none --dry-run --dir "$(mktemp -d)"
 
 # With the fix: "✔ Cherry-picking: Update greeting (#1)"
-git checkout 25e5ec6f43deaa08c5af7b4fddaa6b704e600680
+git checkout 3b6c2b58cfec385f6ea3e99fa135f113477a9fa9
 npm start -- --repo backport-org/clone-filter-repro --pr 1 --branch 7.x --clone-filter blob:none --dry-run --dir "$(mktemp -d)"
 ```
 
